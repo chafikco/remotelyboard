@@ -184,8 +184,10 @@ li:hover {
 }
 @media (max-width: 480px) {
   .card-body {
-    font-size: 8px;
-    width: 150px !important;
+    font-size: 11px;
+    width: 177px !important;
+    padding: 0.5rem !important;
+
   }
   p.mainBlurb {
     display: none;
@@ -196,16 +198,16 @@ li:hover {
     width: 80px;
   }
   #headerLeftSide {
-    width: 175px;
+    width: 155px;
   }
   .searchInput {
     width: 200px !important;
   }
-  .card-body {
-    padding: 0.5rem !important;
-  }
   ul {
-    padding-left: 40px !important;
+    padding-left: 20px !important;
+  }
+  li {
+    width: 270px !important;
   }
   .dropButton {
     width: 70px;
