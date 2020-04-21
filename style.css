@@ -193,7 +193,7 @@ li:hover {
   #contact {
     margin-left: 1rem;
     font-size: 16px;
-    width: 60px;
+    width: 80px;
   }
   #headerLeftSide {
     width: 220px;
@@ -225,11 +225,11 @@ li:hover {
     padding-left: 1rem !important;
   }
   header {
-    padding-left: 0.8rem;
+    padding-left: 0.4rem;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (max-width: 576px) and (min-width: 480px) {
   .card-body {
     font-size: 10px;
     width: 200px !important;
