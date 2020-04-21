@@ -23,7 +23,7 @@ h3 {
   font-size: 2em !important;
 }
 p.mainBlurb {
-  padding: 0.1rem 3rem 0 3rem;
+  padding: 0.1rem 1rem 0 3rem;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 500 !important;
   font-size: 1.5em !important;
@@ -180,5 +180,167 @@ li:hover {
 @keyframes come-in {
   to {
     transform: translateY(0);
+  }
+}
+@media (max-width: 480px) {
+  .card-body {
+    font-size: 8px;
+    width: 150px !important;
+  }
+  p.mainBlurb {
+    display: none;
+  }
+  #contact {
+    margin-left: 1rem;
+    font-size: 16px;
+    width: 60px;
+  }
+  #headerLeftSide {
+    width: 220px;
+  }
+  .searchInput {
+    width: 200px !important;
+  }
+  ul {
+    padding-left: 40px !important;
+  }
+  .dropButton {
+    width: 60px;
+    font-size: 14px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+  #about {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 16px;
+    width: 80px;
+  }
+  h1 {
+    font-size: 2.3em !important;
+    padding-left: 1rem !important;
+  }
+  #subHeader {
+    font-size: 1em !important;
+    padding-left: 1rem !important;
+  }
+  header {
+    padding-left: 0.8rem;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .card-body {
+    font-size: 10px;
+    width: 200px !important;
+  }
+  p.mainBlurb {
+    display: none;
+  }
+  #contact {
+    margin-left: 2rem;
+    font-size: 16px;
+    width: 80px;
+  }
+  #headerLeftSide {
+    width: 280px;
+  }
+  .searchInput {
+    width: 250px !important;
+  }
+  .dropButton {
+    width: 80px;
+    font-size: 14px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+  #about {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    font-size: 16px;
+    width: 80px;
+  }
+  h1 {
+    font-size: 2.3em !important;
+    padding-left: 2rem !important;
+  }
+  #subHeader {
+    font-size: 1.2em !important;
+    padding-left: 2rem !important;
+  }
+  header {
+    padding-left: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) and (min-width: 576px) {
+  .card-body {
+    font-size: 12px;
+    width: 300px !important;
+  }
+  p.mainBlurb {
+    display: none;
+  }
+  #contact {
+    margin-left: 3rem;
+    font-size: 16px;
+    width: 100px;
+  }
+  #headerLeftSide {
+    width: 280px;
+  }
+  #about {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    width: 100px;
+  }
+  h1 {
+    font-size: 2.3em !important;
+  }
+  #subHeader {
+    font-size: 1.2em !important;
+  }
+  header {
+    padding-left: 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .card-body {
+    font-size: 15px;
+    width: 400px !important;
+  }
+  #headerLeftSide {
+    width: 375px;
+  }
+  p.mainBlurb {
+    display: none;
+  }
+  #contact {
+    margin-left: 3rem;
+  }
+  #about {
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 3em !important;
+  }
+  #subHeader {
+    font-size: 1.7em !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) and (min-width: 992px) {
+  .card-body {
+    font-size: 16px;
+  }
+  p.mainBlurb {
+    font-size: 1.2em !important;
+  }
+  h1 {
+    font-size: 4em !important;
   }
 }
