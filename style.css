@@ -196,16 +196,19 @@ li:hover {
     width: 80px;
   }
   #headerLeftSide {
-    width: 220px;
+    width: 175px;
   }
   .searchInput {
     width: 200px !important;
+  }
+  .card-body {
+    padding: 0.5rem !important;
   }
   ul {
     padding-left: 40px !important;
   }
   .dropButton {
-    width: 60px;
+    width: 70px;
     font-size: 14px !important;
     padding-left: 6px !important;
     padding-right: 6px !important;
@@ -217,7 +220,7 @@ li:hover {
     width: 80px;
   }
   h1 {
-    font-size: 2.3em !important;
+    font-size: 2em !important;
     padding-left: 1rem !important;
   }
   #subHeader {
@@ -225,7 +228,13 @@ li:hover {
     padding-left: 1rem !important;
   }
   header {
-    padding-left: 0.4rem;
+    padding: 2rem 1rem 1em 0.4rem;
+  }
+  #jobListings {
+    padding: 1rem 1rem 6rem 1rem;
+  }
+  .card {
+    margin: 0 !important;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
