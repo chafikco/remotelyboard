@@ -1,0 +1,184 @@
+header {
+  text-align: left;
+  display: flex !important;
+  align-items: center;
+  background-color: #164153;
+  width: 100%;
+  padding: 2rem 5rem 2rem 5rem;
+}
+h1 {
+  padding: 1rem 3rem 0 3rem;
+  line-height: 1 !important;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800 !important;
+  color: rgb(236, 113, 113);
+  font-size: 5em !important;
+}
+h3 {
+  padding: 0 3rem 0 3rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  color: white;
+  font-size: 2em !important;
+}
+p.mainBlurb {
+  padding: 0.1rem 3rem 0 3rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500 !important;
+  font-size: 1.5em !important;
+  color: white;
+  max-width: 60%;
+}
+body {
+  background-color: #164153 !important;
+}
+.searchInput {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 600;
+  margin: 0 0.3rem 0 0.3rem;
+  width: 300px;
+}
+.btn-group {
+  font-weight: 600;
+  font-family: "Alegreya Sans", sans-serif;
+  margin: 0 0.3rem 0 0.3rem;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+.btn-primary,
+.btn-secondary {
+  background-color: rgb(236, 113, 113) !important;
+  border-color: rgb(236, 113, 113) !important;
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: rgb(199, 103, 103) !important;
+  border-color: rgb(199, 103, 103) !important;
+}
+#contact {
+  margin: 0 0.5rem 1.5rem 0.5rem;
+  width: 130px;
+  height: 40px;
+  background-color: white !important;
+  color: rgb(236, 113, 113) !important;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 18px;
+}
+#contact:hover {
+  background-color: rgb(231, 231, 231) !important;
+  cursor: pointer;
+}
+#about {
+  margin: 0 0.5rem 1.5rem 3rem;
+  width: 130px;
+  height: 40px;
+  color: white !important;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 18px;
+}
+#about:hover {
+  cursor: pointer;
+}
+.card {
+  margin: 1rem 0 1rem 0;
+  background-color: transparent !important;
+}
+.about {
+  background-color: rgb(236, 113, 113) !important;
+  color: white !important;
+}
+.contact {
+  background-color: white;
+  color: rgb(236, 113, 113) !important;
+}
+.card-body {
+  width: 500px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 19px;
+  border-radius: 7px !important;
+}
+#jobListings {
+  /* align-items: center; */
+  transform: translateY(1000px);
+  animation: come-in 2s ease forwards;
+  border-radius: 40px 40px 0 0;
+  padding: 2rem 3rem 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  background: #fbfaf4 !important;
+}
+.aboutBox,
+.contactBox {
+  opacity: 0;
+}
+#searchSection {
+  align-items: center;
+  display: flex;
+  margin: auto auto 1.5rem auto;
+}
+.form-group {
+  margin-bottom: 1.1px !important;
+}
+h2 {
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1.4rem !important;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700 !important;
+  margin: 0;
+}
+h4 {
+  padding: 0 1rem 0.6rem 1rem;
+  font-size: 1.1rem !important;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400 !important;
+  margin: 0;
+}
+p.titleCard {
+  padding: 0 1rem 0.6rem 1rem;
+  font-size: 1.1rem !important;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400 !important;
+  margin: 0;
+}
+a {
+  margin: auto;
+  width: 80%;
+  text-decoration: none;
+  color: #455a64 !important;
+}
+p a {
+  margin: auto;
+  width: 80%;
+  text-decoration: none;
+  color: rgb(236, 113, 113) !important;
+}
+a:hover,
+a:focus {
+  color: #2196f3;
+  text-decoration: none !important;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 65px !important;
+}
+li {
+  width: 225px;
+  min-height: 225px;
+  text-align: center;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background: #eceff1;
+  border-radius: 30px;
+  overflow: hidden;
+  font: 12px/1.1 system-ui, sans-serif;
+}
+li:hover {
+  box-shadow: 0 0 1px 0 rgba(42, 42, 42, 0.4), 0 3px 4px 0 rgba(42, 42, 42, 0.2);
+}
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
+}

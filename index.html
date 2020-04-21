@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Remotely Board</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Google Fonts import -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="headerLeftSide">
+        <h1>Remotely<br />Board.</h1>
+        <h3 id="subHeader"></h3>
+        <p class="mainBlurb">
+          A remote job board that combines job posts from
+          <a href="https://remotive.io/" class="refLinks" target="_blank"
+            >Remotive.io</a
+          >,
+          <a href="https://remoteok.io/" class="refLinks" target="_blank"
+            >Remoteok.io</a
+          >
+          and
+          <a href="https://weworkremotely.com/" class="refLinks" target="_blank"
+            >WWR</a
+          >.
+        </p>
+        <a name="about" id="about" onclick="openBox('about')" class="btn btn-primary" role="button">About</a>
+        <a name="contact" id="contact" onclick="openBox('contact')" class="btn btn-primary" role="button">Contact</a>
+      </div>
+      <div id="headerRightSide">
+        <div class="card text-left aboutBox">
+          <div class="card-body about">
+            <p class="card-text">After spending hours a day trawling through seperate remote job boards, I decided to look into making the process a bit more efficient. <br><br>A few days later, RemotelyBoard.com was created.</p>
+          </div>
+          </div>
+          <div class="card text-left contactBox">
+            <div class="card-body contact">
+              <p class="card-text">Designed and devloped by Chafik Yahiaoui using Bootstrap 4 and JavaScript (with some jQuery). Hosted on Netlify.<br><br>For work and freelance enquiries you can contact me at <a href="mailto:contact@remotelyboard.com">contact@remotelyboard.com</a></p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    <div id="jobListings">
+      <div id="searchSection">
+        <div class="form-group searchInput">
+          <label for="jobSearch"></label>
+          <input
+            type="text"
+            class="form-control"
+            onkeyup="filterJobs()"
+            name="searchBar"
+            id="jobSearch"
+            aria-describedby="Filter Jobs"
+            placeholder="Search for jobs..."
+          />
+          <small id="helpId" class="form-text text-muted">Filter Jobs</small>
+      </div>
+      <div class="btn-group filterSrc">
+        <button type="button" class="btn btn-primary dropButton">Job Board</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" onclick="changeSource('remotive')">Remotive.io</a>
+          <a class="dropdown-item" onclick="changeSource('remoteok')">Remoteok.io</a>
+          <a class="dropdown-item" onclick="changeSource('wwr')">We Work Remotely</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" onclick="changeSource()">Clear</a>
+        </div>
+      </div>
+    </div>
+    <ul id="jobPosts"></ul>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
