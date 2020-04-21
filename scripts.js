@@ -45,7 +45,7 @@ fetch(RemoteokUrl)
         var dateValue = items[i].date.substring(0, 10);
         var tags = items[i].tags.join(", ");
         html += `
-    <li class="remoteok" data-date="${dateValue}"><a href="${items[i].url}" target="_blank" rel="noopener">
+    <li class="remoteok autosort" data-date="${dateValue}"><a href="${items[i].url}" target="_blank" rel="noopener">
       <article>
         <h2>
             ${items[i].position}
@@ -80,7 +80,7 @@ fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
       var dateValue = items[i].publication_date.substring(0, 10);
       var tags = items[i].tags.join(", ");
       html += `
-        <li class="remotive" data-date="${dateValue}"><a href="${
+        <li class="remotive autosort" data-date="${dateValue}"><a href="${
         items[i].url
       }" target="_blank" rel="noopener">
           <article>
@@ -119,7 +119,7 @@ function rssCallWWR(RSS_URL) {
         var dateHold = el.querySelector("pubDate").innerHTML;
         var dateValue = dateHold.substring(0, 16);
         html += `
-        <li class="wwr" data-date="${
+        <li class="wwr autosort" data-date="${
           el.querySelector("pubDate").innerHTML
         }"><a href="${
           el.querySelector("link").innerHTML
@@ -222,12 +222,12 @@ function changeSource(source) {
     filterJobs("");
   }
 }
-//order by date decending
-$(function () {
-  $(".listitems li").sort(sort_li).appendTo(".listitems");
-  function sort_li(a, b) {
-    return $(b).data("date") < $(a).data("date") ? 1 : -1;
-  }
+
+//order by date decending - everything with class "autosort" will be sorted
+$(".li.autosort").each(function(){
+  $(this).html($(this).children('li').sort(function(a, b){
+  	return ($(b).data('date')) > ($(a).data('date')) ? 1 : -1;
+  }));
 });
 
 //on click animate the about and contact boxes
