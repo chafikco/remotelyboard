@@ -103,6 +103,7 @@ body {
   /* align-items: center; */
   transform: translateY(1000px);
   animation: come-in 2s ease forwards;
+  animation-delay: 1.5s;
   border-radius: 40px 40px 0 0;
   padding: 2rem 3rem 6rem 3rem;
   display: flex;

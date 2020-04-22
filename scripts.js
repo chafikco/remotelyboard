@@ -235,7 +235,7 @@ setTimeout(function() {
     return new Date($(b).data("date")) - new Date($(a).data("date"));
   });
   post.append(posts);
-}, 600);
+}, 2000);
 
 //on click animate the about and contact boxes
 function openBox(button) {
