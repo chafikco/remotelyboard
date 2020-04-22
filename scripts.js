@@ -117,11 +117,14 @@ function rssCallWWR(RSS_URL) {
       let html = ``;
       items.forEach((el) => {
         var dateHold = el.querySelector("pubDate").innerHTML;
-        var dateValue = dateHold.substring(0, 16);
+        var year = dateHold.substr(12, 4);
+        var mon = dateHold.substr(8, 3).toLowerCase();
+        var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+        mon = months.indexOf(mon)+1;
+        var day = dateHold.substr(5, 2);
+        var dateValue = year + "-" + mon + "-" + day;
         html += `
-        <li class="wwr autosort" data-date="${
-          el.querySelector("pubDate").innerHTML
-        }"><a href="${
+        <li class="wwr autosort" data-date="${dateValue}"><a href="${
           el.querySelector("link").innerHTML
         }" target="_blank" rel="noopener">
         <article>
@@ -223,12 +226,16 @@ function changeSource(source) {
   }
 }
 
-//order by date decending - everything with class "autosort" will be sorted
-$(".li.autosort").each(function(){
-  $(this).html($(this).children('li').sort(function(a, b){
-  	return ($(b).data('date')) > ($(a).data('date')) ? 1 : -1;
-  }));
-});
+//order by date decending - everything with class "autosort" will be sorted. Set a delay to find old order
+setTimeout(function() {
+  // Now sort them
+  var post = $("#jobPosts");
+  var posts = post.children('.autosort').detach().get();
+  posts.sort(function(a, b) {
+    return new Date($(b).data("date")) - new Date($(a).data("date"));
+  });
+  post.append(posts);
+}, 600);
 
 //on click animate the about and contact boxes
 function openBox(button) {
