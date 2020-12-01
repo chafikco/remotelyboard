@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZRVJS0BYR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-GZRVJS0BYR');
-    </script>
-        <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PFK89BD');</script>
-    <!-- End Google Tag Manager -->
-
     <title>Remotely Board - The remote job aggregate</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <!-- Required meta tags -->
@@ -45,27 +28,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="scripts.js"></script>
-    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
-    <script type="text/javascript">
-      Paddle.Environment.set("sandbox");
-      Paddle.Setup({
-        vendor: 643,
-        eventCallback: function(data) {
-          if (data.event === 'Checkout.Complete') {
-            dataLayer.push({'event': 'checkoutSuccess'});
-          }
-          else if (data.event === 'Checkout.Close') {
-            dataLayer.push({'event': 'checkoutClose'});
-          }
-        }
-      });
-    </script>
   </head>
   <body>
-        <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFK89BD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <header>
       <div id="headerLeftSide">
         <h1>Remotely<br />Board.</h1>
@@ -85,7 +49,6 @@
         </p>
         <a name="about" id="about" onclick="openBox('about')" class="btn btn-primary" role="button">About</a>
         <a name="contact" id="contact" onclick="openBox('contact')" class="btn btn-primary" role="button">Contact</a>
-        <a name="buy" id="buy" class="btn btn-primary" style="display: none;" role="button">Contact</a>
       </div>
       <div id="headerRightSide">
         <div class="card text-left aboutBox">
@@ -131,16 +94,6 @@
     </div>
     <ul id="jobPosts"></ul>
     </div>
-    <script type="text/javascript">
-
-        function openCheckout() {
-      Paddle.Checkout.open({ product: 7278 });
-    }
-
-      document
-        .getElementById("buy")
-        .addEventListener("click", openCheckout, false);
-    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
